@@ -1,0 +1,11 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    {% if lstquest %}
+        {% for item in lstquest %}
+            <p>{{ item.question_text }}</p>
+        {% endfor %}
+    {% else %}
+        <h3 style = "color: red;">No data for question list</h3>
+    {% endif %}
+{% endblock %}
